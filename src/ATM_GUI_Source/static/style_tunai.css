@@ -1,0 +1,161 @@
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+body {
+  background-color: #4B86B4;
+  font-family: 'Roboto Mono', monospace; !important
+}
+
+button {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.atm-text {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 65px;
+  height: 47px;
+  color: white;
+  font-size: 36px;
+}
+
+ /*<div class="atm-text">ATM</div>*/
+ /* <div class="left-bar">*/
+ /*   <div class="selamat-datang">Selamat datang,</div>*/
+ /*   <div class="nama-orang">Tuan Mor</div>*/
+ /*   <div class="saldo-anda">Saldo Anda:</div>*/
+ /*   <div class="saldo">$290</div>*/
+ /* </div>*/
+ /* <button type="button" onclick="enter_tunai()">Tarik Tunai</button>*/
+ /* <button type="button" onclick="enter_transfer()">Transfer</button>*/
+
+.left-bar {
+  width: 173px;
+  height: 100vh;
+  background-color: #013056;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.anda-memilih {
+  font-size: 12px;
+  color: #96CFFD;
+  position: absolute;
+  top: 193px;
+  left: 20px;
+}
+
+.tarik-tunai {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 213px;
+  left: 32px;
+}
+
+.saldo-anda {
+  font-size: 12px;
+  color: #96CFFD;
+  position: absolute;
+  top: 272px;
+  left: 20px;
+}
+
+.saldo {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 292px;
+  left: 32px;
+}
+
+.btn {
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 82px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #013056;
+  color: white;
+  border: 0;
+}
+
+.batal {
+  top: 76px;
+  left: 355px;
+}
+
+.lainnya {
+  font-size: 12px;
+  top: 347px;
+  left: 355px;
+}
+
+.satu {
+  left: 213px;
+  top: 347px;
+}
+
+.dua {
+  left: 213px;
+  top: 280px;
+}
+
+.lima {
+  left: 355px;
+  top: 280px;
+}
+
+.sepuluh {
+  left: 213px;
+  top: 213px;
+}
+
+.duapuluh {
+  left: 355px;
+  top: 213px;
+}
+
+.limapuluh {
+  left: 213px;
+  top: 144px;
+}
+
+.seratus {
+  left: 355px;
+  top: 144px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function add_click(num) {
+      eel.add_click(num, document.querySelector('.text-bar').innerHTML)
+    }
+
+    // eel.update_text(ret_val)
+    eel.expose(update_text)
+    function update_text(text) {
+      document.querySelector('.text-bar').innerHTML = text;
+    }
+
+    function validate() {
+      eel.validate(document.querySelector('.text-bar').innerHTML)
+    }
+
+    eel.expose(enter_cp)
+    function enter_cp() {
+      location.replace("user_cp.html")
+    }
+
+    function erase_pin() {
+      eel.erase_pin(document.querySelector('.text-bar').innerHTML);
+    }
+  </script>
+  <title>Autentikasi</title>
+</head>
+<body>
+  <div class="fade-in">
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="text-bar"></div>
+    <button type="button" onclick="add_click(0)" class="button btn0">0</button>
+    <button type="button" onclick="add_click(1)" class="button btn1">1</button>
+    <button type="button" onclick="add_click(2)" class="button btn2">2</button>
+    <button type="button" onclick="add_click(3)" class="button btn3">3</button>
+    <button type="button" onclick="add_click(4)" class="button btn4">4</button>
+    <button type="button" onclick="add_click(5)" class="button btn5">5</button>
+    <button type="button" onclick="add_click(6)" class="button btn6">6</button>
+    <button type="button" onclick="add_click(7)" class="button btn7">7</button>
+    <button type="button" onclick="add_click(8)" class="button btn8">8</button>
+    <button type="button" onclick="add_click(9)" class="button btn9">9</button>
+    <button type="button" onclick="erase_pin()" class="button btn-erase"><=</button>
+    <button type="button" onclick="validate()" class="button btnval">Autentikasi</button>
+  </div>
+</body>
+</html>

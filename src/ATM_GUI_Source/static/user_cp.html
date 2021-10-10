@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_cp.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function enter_tunai() {
+      location.replace("tarik_tunai.html")
+    }
+
+    function enter_deposit() {
+      location.replace("deposit.html")
+    }
+
+    function enter_transfer() {
+      location.replace("transfer.html")
+    }
+
+    function get_info() {
+      eel.get_info();
+    }
+
+    eel.expose(update_info)
+    function update_info(user, saldo) {
+      document.querySelector(".nama-orang").innerHTML = user;
+      document.querySelector(".saldo").innerHTML = saldo;
+    }
+
+    function logout() {
+      location.replace("minta_kartu.html")
+    }
+  </script>
+  <title>Control Panel</title>
+</head>
+<body>
+  <div class="fade-in">
+    <div class="left-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="selamat-datang">Selamat datang,</div>
+    <div class="nama-orang"></div>
+    <div class="saldo-anda">Saldo Anda:</div>
+    <div class="saldo"></div>
+    <button type="button" class="btn tarik-tunai" onclick="enter_tunai()">Tarik Tunai</button>
+    <button type="button" class="btn deposit" onclick="enter_deposit()">Simpan Tunai</button>
+    <button type="button" class="btn transfer" onclick="enter_transfer()">Transfer</button>
+    <button type="button" class="btn logout" onclick="logout()">Keluar</button>
+  </div>
+  <script>
+    get_info();
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_deposit2.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function get_info_deposit() {
+      eel.get_info_deposit();
+    }
+
+    eel.expose(update_deposit);
+    function update_deposit(pemasukan, saldo) {
+      document.querySelector(".pemasukan").innerHTML = pemasukan;
+      document.querySelector(".saldo").innerHTML = saldo;
+    }
+
+    function go_back() {
+      location.replace('user_cp.html');
+    }
+  </script>
+  <title>Transaksi</title>
+</head>
+<body>
+  <div class="fade-in">
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="deposit-tunai">Deposit tunai</div>
+    <div class="transaksi-berhasil">Transaksi berhasil.</div>
+    <div class="dimasukkan-sebesar">Dimasukkan tunai sebesar:</div>
+    <div class="pemasukan"></div>
+    <div class="saldo-sekarang">Saldo sekarang:</div>
+    <div class="saldo"></div>
+    <button type="button" class="btn kembali" onclick="go_back()">Kembali</button>
+  </div>
+  <script>
+    get_info_deposit();
+  </script>
+</body>
+</html>

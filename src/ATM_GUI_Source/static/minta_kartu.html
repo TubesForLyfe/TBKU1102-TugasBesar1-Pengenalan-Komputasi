@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_tarikan_lain.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function erase_akun() {
+      eel.erase_akun();
+    }
+
+    function add_akun(num) {
+      eel.add_akun(num);
+    }
+
+    function ke_pin() {
+      eel.ke_pin();
+    }
+
+    eel.expose(update_akun);
+    function update_akun(text) {
+      document.querySelector('.text-bar').innerHTML = text;
+    }
+
+    eel.expose(masuk)
+    function masuk() {
+      location.replace('index.html');
+    }
+
+    function reset_akun_data() {
+      eel.reset_akun_data();
+    }
+  </script>
+  <title>ATM</title>
+</head>
+<body>
+  <div class="fade-in">
+    <script>
+      reset_akun_data();
+    </script>
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="text-bar"></div>
+    <div class="text-1">Masukkan kartu Anda.</div>
+    <div class="text-2">Dalam program ini, disimulasikan dengan</div>
+    <div class="text-3">memasukkan nomor yang tertera (10 digit).</div>
+    <button type="button" onclick="erase_akun()" class="button erase"><=</button>
+    <button type="button" onclick="add_akun(0)" class="button btn0">0</button>
+    <button type="button" onclick="add_akun(1)" class="button btn1">1</button>
+    <button type="button" onclick="add_akun(2)" class="button btn2">2</button>
+    <button type="button" onclick="add_akun(3)" class="button btn3">3</button>
+    <button type="button" onclick="add_akun(4)" class="button btn4">4</button>
+    <button type="button" onclick="add_akun(5)" class="button btn5">5</button>
+    <button type="button" onclick="add_akun(6)" class="button btn6">6</button>
+    <button type="button" onclick="add_akun(7)" class="button btn7">7</button>
+    <button type="button" onclick="add_akun(8)" class="button btn8">8</button>
+    <button type="button" onclick="add_akun(9)" class="button btn9">9</button>
+    <button type="button" onclick="ke_pin()" class="button btn-tarik">Masuk</button>
+  </div>
+</body>
+</html>

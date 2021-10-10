@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_transaksi.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function get_info_transaksi() {
+      eel.get_info_transaksi();
+    }
+
+    eel.expose(update_transaksi);
+    function update_transaksi(pengambilan, sisa) {
+      document.querySelector(".pengambilan").innerHTML = pengambilan;
+      document.querySelector(".saldo-sisa").innerHTML = sisa;
+    }
+
+    function go_back() {
+      location.replace('user_cp.html');
+    }
+  </script>
+  <title>Transaksi</title>
+</head>
+<body>
+  <div class="fade-in">
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="penarikan-tunai">Penarikan tunai</div>
+    <div class="transaksi-berhasil">Transaksi berhasil.</div>
+    <div class="diambil-sebesar">Ditarik tunai sebesar:</div>
+    <div class="pengambilan"></div>
+    <div class="saldo-tersisa">Saldo yang tersisa:</div>
+    <div class="saldo-sisa"></div>
+    <button type="button" class="btn kembali" onclick="go_back()">Kembali</button>
+  </div>
+  <script>
+    get_info_transaksi();
+  </script>
+</body>
+</html>

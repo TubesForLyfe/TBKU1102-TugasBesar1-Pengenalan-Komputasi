@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_transaksi_gagal.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function go_back() {
+      location.replace('user_cp.html');
+    }
+  </script>
+  <title>Transaksi</title>
+</head>
+<body>
+  <div class="fade-in">
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="penarikan-tunai">Penarikan tunai</div>
+    <div class="transaksi-gagal">Transaksi gagal.</div>
+    <div class="keterangan">Keterangan:</div>
+    <div class="keterangan-text">Saldo Anda tidak mencukupi.</div>
+    <button type="button" class="btn kembali" onclick="go_back()">Kembali</button>
+  </div>
+</body>
+</html>

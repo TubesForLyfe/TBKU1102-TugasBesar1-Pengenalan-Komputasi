@@ -1,0 +1,135 @@
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+body {
+  background-color: #4B86B4;
+  font-family: 'Roboto Mono', monospace; !important
+}
+
+button {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.atm-text {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 65px;
+  height: 47px;
+  color: white;
+  font-size: 36px;
+}
+
+ /*<div class="atm-text">ATM</div>*/
+ /* <div class="left-bar">*/
+ /*   <div class="selamat-datang">Selamat datang,</div>*/
+ /*   <div class="nama-orang">Tuan Mor</div>*/
+ /*   <div class="saldo-anda">Saldo Anda:</div>*/
+ /*   <div class="saldo">$290</div>*/
+ /* </div>*/
+ /* <button type="button" onclick="enter_tunai()">Tarik Tunai</button>*/
+ /* <button type="button" onclick="enter_transfer()">Transfer</button>*/
+
+.left-bar {
+  width: 173px;
+  height: 100vh;
+  background-color: #013056;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.selamat-datang {
+  font-size: 12px;
+  color: #96CFFD;
+  position: absolute;
+  top: 193px;
+  left: 20px;
+}
+
+.nama-orang {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 213px;
+  left: 24px;
+}
+
+.saldo-anda {
+  font-size: 12px;
+  color: #96CFFD;
+  position: absolute;
+  top: 272px;
+  left: 20px;
+}
+
+.saldo {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 292px;
+  left: 24px;
+}
+
+.btn {
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 213px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #013056;
+  color: white;
+  border: 0;
+}
+
+.tarik-tunai {
+  left: 212px;
+  top: 143px;
+}
+
+.deposit {
+  left: 212px;
+  top: 218px;
+}
+
+.transfer {
+  left: 212px;
+  top: 288px;
+}
+
+.logout {
+  left: 212px;
+  top: 359px;
+}

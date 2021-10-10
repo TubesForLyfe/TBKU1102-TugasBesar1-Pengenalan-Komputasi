@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_tarikan_lain.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function erase_rekening() {
+      eel.erase_rekening();
+    }
+
+    function add_rekening(num) {
+      eel.add_rekening(num);
+    }
+
+    function ke_transfer() {
+      eel.ke_transfer();
+    }
+
+    eel.expose(update_rekening);
+    function update_rekening(text) {
+      document.querySelector('.text-bar').innerHTML = text;
+    }
+
+    function batal() {
+      location.replace('user_cp.html');
+    }
+
+    eel.expose(go_transfer)
+    function go_transfer() {
+      location.replace('transfer2.html');
+    }
+
+    function reset_rekening_data() {
+      eel.reset_rekening_data();
+    }
+  </script>
+  <title>Transfer</title>
+</head>
+<body>
+  <div class="fade-in">
+    <script>
+      reset_rekening_data();
+    </script>
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="text-bar"></div>
+    <div class="text-1">Masukkan rekening yang ingin Anda tuju.</div>
+    <div class="text-2">Rekening terdiri atas bilangan 10 digit.</div>
+    <div class="text-3">Sistem hanya menerima rekening yang valid.</div>
+    <button type="button" onclick="erase_rekening()" class="button erase"><=</button>
+    <button type="button" onclick="add_rekening(0)" class="button btn0">0</button>
+    <button type="button" onclick="add_rekening(1)" class="button btn1">1</button>
+    <button type="button" onclick="add_rekening(2)" class="button btn2">2</button>
+    <button type="button" onclick="add_rekening(3)" class="button btn3">3</button>
+    <button type="button" onclick="add_rekening(4)" class="button btn4">4</button>
+    <button type="button" onclick="add_rekening(5)" class="button btn5">5</button>
+    <button type="button" onclick="add_rekening(6)" class="button btn6">6</button>
+    <button type="button" onclick="add_rekening(7)" class="button btn7">7</button>
+    <button type="button" onclick="add_rekening(8)" class="button btn8">8</button>
+    <button type="button" onclick="add_rekening(9)" class="button btn9">9</button>
+    <button type="button" onclick="ke_transfer()" class="button btn-tarik">Transfer</button>
+    <button type="button" onclick="batal()" class="button btn-batal">Batal</button>
+  </div>
+</body>
+</html>

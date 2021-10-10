@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_tarikan_lain.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function erase_transfer() {
+      eel.erase_transfer();
+    }
+
+    function add_transfer(num) {
+      eel.add_transfer(num);
+    }
+
+    function ke_transaksi() {
+      eel.ke_transaksi();
+    }
+
+    eel.expose(update_transfer);
+    function update_transfer(text) {
+      document.querySelector('.text-bar').innerHTML = text;
+    }
+
+    function batal() {
+      location.replace('user_cp.html');
+    }
+
+    eel.expose(go_transaksi)
+    function go_transaksi() {
+      location.replace('transaksi2.html');
+    }
+
+    function reset_transfer_data() {
+      eel.reset_transfer_data();
+    }
+
+    function set_text_1() {
+      eel.set_text_1();
+    }
+
+    eel.expose(setText1)
+    function setText1(text) {
+      document.querySelector('.text-1').innerHTML = text;
+    }
+  </script>
+  <title>Transfer</title>
+</head>
+<body>
+  <div class="fade-in">
+    <script>
+      reset_transfer_data();
+      set_text_1();
+    </script>
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="text-bar">$</div>
+    <div class="text-1"></div>
+    <div class="text-2">Transfer maksimal sebesar $200.</div>
+    <div class="text-3">Sistem tidak akan menerima nominal yang tidak sesuai.</div>
+    <button type="button" onclick="erase_transfer()" class="button erase"><=</button>
+    <button type="button" onclick="add_transfer(0)" class="button btn0">0</button>
+    <button type="button" onclick="add_transfer(1)" class="button btn1">1</button>
+    <button type="button" onclick="add_transfer(2)" class="button btn2">2</button>
+    <button type="button" onclick="add_transfer(3)" class="button btn3">3</button>
+    <button type="button" onclick="add_transfer(4)" class="button btn4">4</button>
+    <button type="button" onclick="add_transfer(5)" class="button btn5">5</button>
+    <button type="button" onclick="add_transfer(6)" class="button btn6">6</button>
+    <button type="button" onclick="add_transfer(7)" class="button btn7">7</button>
+    <button type="button" onclick="add_transfer(8)" class="button btn8">8</button>
+    <button type="button" onclick="add_transfer(9)" class="button btn9">9</button>
+    <button type="button" onclick="ke_transaksi()" class="button btn-tarik">Transfer</button>
+    <button type="button" onclick="batal()" class="button btn-batal">Batal</button>
+  </div>
+</body>
+</html>

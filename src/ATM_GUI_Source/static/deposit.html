@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_deposit.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function go_back() {
+      location.replace('user_cp.html')
+    }
+
+    function deposit(amount) {
+      eel.deposit(amount)
+      location.replace('deposit_2.html')
+    }
+  </script>
+  <title>Deposit</title>
+</head>
+<body>
+  <div class="fade-in">
+    <div class="top-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="masukkan-tunai">Masukkan uang tunai Anda ke dalam ATM.</div>
+    <div class="nominal-minimal">Nominal minimal sebesar $5.</div>
+    <button type="button" class="btn batal" onclick="go_back()">Batal</button>
+    <button type="button" class="btn five" onclick="deposit(5)"></button>
+    <button type="button" class="btn ten" onclick="deposit(10)"></button>
+    <button type="button" class="btn twenty" onclick="deposit(20)"></button>
+    <button type="button" class="btn fifty" onclick="deposit(50)"></button>
+    <button type="button" class="btn hundred" onclick="deposit(100)"></button>
+  </div>
+  <script>
+    get_info_transaksi();
+  </script>
+</body>
+</html>

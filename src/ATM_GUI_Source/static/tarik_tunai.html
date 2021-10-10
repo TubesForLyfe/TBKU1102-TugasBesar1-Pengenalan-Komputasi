@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_tunai.css" type="text/css">
+  <script src="eel.js"></script>
+  <script>
+    function get_info() {
+      eel.get_info();
+    }
+
+    eel.expose(update_info)
+    function update_info(user, saldo) {
+      document.querySelector(".saldo").innerHTML = saldo;
+    }
+
+    function go_back() {
+      location.replace('user_cp.html');
+    }
+
+    function tarik_tunai(amount) {
+      eel.tarik_tunai(amount);
+    }
+
+    eel.expose(go_transaksi)
+    function go_transaksi() {
+      location.replace('transaksi.html')
+    }
+
+    eel.expose(go_gagal)
+    function go_gagal() {
+      location.replace('gagal.html')
+    }
+
+    function go_lainnya() {
+      location.replace('tarikan_lain.html')
+    }
+  </script>
+  <title>Penarikan Tunai</title>
+</head>
+<body>
+  <div class="fade-in">
+    <div class="left-bar"></div>
+    <div class="atm-text">ATM</div>
+    <div class="anda-memilih">Anda memilih</div>
+    <div class="tarik-tunai">Tarik Tunai</div>
+    <div class="saldo-anda">Saldo Anda:</div>
+    <div class="saldo"></div>
+    <button type="button" class="btn batal" onclick="go_back()">Batal</button>
+    <button type="button" class="btn lainnya" onclick="go_lainnya()">Jumlah lain</button>
+    <button type="button" class="btn satu" onclick="tarik_tunai(1)">$1</button>
+    <button type="button" class="btn dua" onclick="tarik_tunai(2)">$2</button>
+    <button type="button" class="btn lima" onclick="tarik_tunai(5)">$5</button>
+    <button type="button" class="btn sepuluh" onclick="tarik_tunai(10)">$10</button>
+    <button type="button" class="btn duapuluh" onclick="tarik_tunai(20)">$20</button>
+    <button type="button" class="btn limapuluh" onclick="tarik_tunai(50)">$50</button>
+    <button type="button" class="btn seratus" onclick="tarik_tunai(100)">$100</button>
+  </div>
+  <script>
+    get_info();
+  </script>
+</body>
+</html>

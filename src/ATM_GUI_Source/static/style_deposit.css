@@ -1,0 +1,138 @@
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+body {
+  background-color: #4B86B4;
+  font-family: 'Roboto Mono', monospace; !important
+}
+
+button {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.atm-text {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 65px;
+  height: 47px;
+  color: white;
+  font-size: 36px;
+}
+
+.top-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 143px;
+  background-color: #013056;
+}
+
+.masukkan-tunai {
+  position: absolute;
+  left: 15px;
+  top: 79px;
+  color: white;
+  font-size: 14px;
+}
+
+.nominal-minimal {
+  position: absolute;
+  left: 15px;
+  top: 102px;
+  color: white;
+  font-size: 14px;
+}
+
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+.batal {
+  width: 75px;
+  height: 37px;
+  left: 370px;
+  top: 79px;
+  background-color: #c4c4c4;
+  color: black;
+  font-size: 18px;
+}
+
+.five {
+  width: 177px;
+  height: 74px;
+  left: 42px;
+  top: 157px;
+  background: url("./images/5dollar.jpg");
+  background-size: 177px 74px;
+}
+
+.ten {
+  width: 177px;
+  height: 76px;
+  left: 259px;
+  top: 156px;
+  background: url("./images/10dollar.jpg");
+  background-size: 177px 76px;
+}
+
+.twenty {
+  width: 177px;
+  height: 76px;
+  left: 42px;
+  top: 251px;
+  background: url("./images/20dollar.png");
+  background-size: 177px 76px;
+}
+
+.fifty {
+  width: 178px;
+  height: 76px;
+  left: 259px;
+  top: 250px;
+  background: url("./images/50dollar.png");
+  background-size: 178px 76px;
+}
+
+.hundred {
+  width: 180px;
+  height: 73px;
+  left: 157px;
+  top: 352px;
+  background: url("./images/100dollar.jpg");
+  background-size: 180px 73px;
+}

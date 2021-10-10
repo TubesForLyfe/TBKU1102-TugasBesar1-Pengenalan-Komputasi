@@ -1,0 +1,117 @@
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+body {
+  background-color: #4B86B4;
+  font-family: 'Roboto Mono', monospace; !important
+}
+
+button {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.atm-text {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 65px;
+  height: 47px;
+  color: white;
+  font-size: 36px;
+}
+
+/*<div class="top-bar"></div>*/
+/*    <div class="atm-text">ATM</div>*/
+/*    <div class="penarikan-tunai">Penarikan tunai</div>*/
+/*    <div class="transaksi-berhasil">Transaksi berhasil!</div>*/
+/*    <div class="diambil_sebesar">Diambil tunai sebesar:</div>*/
+/*    <div class="pengambilan"></div>*/
+/*    <div class="saldo-tersisa">Saldo yang tersisa:</div>*/
+/*    <div class="saldo-sisa"></div>*/
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 357px;
+  width: 100vw;
+  background-color: #013056;
+}
+
+.penarikan-tunai {
+  position: absolute;
+  color: #96CFFD;
+  font-size: 12px;
+  left: 20px;
+  top: 94px;
+}
+
+.transaksi-gagal {
+  position: absolute;
+  color: #FF9696;
+  font-size: 18px;
+  left: 45px;
+  top: 116px;
+}
+
+.keterangan {
+  position: absolute;
+  color: #96CFFD;
+  font-size: 12px;
+  left: 21px;
+  top: 152px;
+}
+
+.keterangan-text {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  left: 45px;
+  top: 175px;
+}
+
+.btn {
+  position: absolute;
+  width: 310px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #013056;
+  color: white;
+  border: 0;
+}
+
+.kembali {
+  left: 96px;
+  top: 383px;
+}
